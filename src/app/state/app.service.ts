@@ -4,7 +4,7 @@ import { Feature } from './app.state';
 
 @Injectable({ providedIn: 'root' })
 export class AppService {
-    // Normally this service would be stateless just passing things through
+    // Normally this service would be completely stateless just passing things through
     private dictionary: string[] = ['Run', 'Rap', 'Raw', 'Rose', 'Rain'];
     private features: Feature[] = [
         {
@@ -33,6 +33,7 @@ export class AppService {
         return of(this.dictionary.filter(r => r.toLowerCase().indexOf(query) === 0));
     }
 
+    // Same
     getFeatures() {
         return of(this.features);
     }
