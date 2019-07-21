@@ -1,0 +1,60 @@
+@import 'utils';
+
+:host {
+    background-color: var(--anj-background);
+    box-shadow: 0 1px 0 var(--rb-shadow);
+    display: block;
+    padding: 0.5rem;
+    position: sticky; // sorry IE users
+    z-index: $zindex-sticky;
+
+    @media (min-width: $breakpoint-small) {
+        padding: 0.75rem 2rem;
+    }
+}
+
+header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+    h1 {
+        display: none;
+        font-size: $font-size-lg;
+        font-weight: 500;
+        letter-spacing: 0.025rem;
+        margin: 0;
+        padding: 0 2rem 0 0;
+
+        @media (min-width: $breakpoint-small) {
+            display: flex;
+        }
+
+        a {
+            color: var(--rb-dark);
+            text-decoration: none;
+        }
+    }
+
+    .header-right {
+        rb-button {
+            display: none;
+
+            &:not(:first-child) {
+                margin-left: 0.5rem;
+            }
+
+            &:last-child {
+                display: inline-block;
+            }
+        }
+
+        @media (min-width: $breakpoint-small) {
+            padding-left: 1rem;
+
+            rb-button {
+                display: inline-block;
+            }
+        }
+    }
+}

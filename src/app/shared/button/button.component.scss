@@ -1,0 +1,78 @@
+@import 'utils';
+
+:host {
+    display: inline-block;
+    vertical-align: middle;
+
+    button {
+        border: 0;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &:not([context="icon"]) {
+        button {
+            border: 0;
+            font: $san-serif;
+            font-size: 0.875rem;
+            font-weight: 500;
+            padding: 0.55rem 0.75rem 0.65rem;
+        }
+    }
+
+    &[shape="pill"] {
+        button {
+            border-radius: 1rem;
+        }
+    }
+
+    &[shape="rounded"] {
+        button {
+            border-radius: 0.25rem;
+        }
+    }
+
+    &[context="primary"] {
+        button {
+            background-color: var(--rb-primary);
+            color: var(--rb-background);
+        }
+    }
+
+    &[context="secondary"] {
+        button {
+            background-color: var(--rb-secondary);
+            color: var(--rb-dark)
+        }
+    }
+
+    &[context="icon"] {
+        button {
+            border-radius: 50%;
+            padding: 0.35rem;
+            transition: background-color 0.15s;
+        }
+    }
+
+    &[context="icon"]:not([inverse]) {
+        button {
+            background-color: transparent;
+            color: var(--rb-light);
+
+            &:hover,
+            &:focus {
+                background-color: var(--rb-secondary);
+                color: var(--rb-dark);
+            }
+        }
+    }
+
+    &[context="icon"][inverse] {
+        button {
+            background-color: var(--rb-shadow-dark);
+            color: var(--rb-background);
+        }
+    }
+}

@@ -1,0 +1,19 @@
+:host {
+    display: block;
+    transform: translateX(-50%);
+
+    &:not(:first-child) {
+        padding-left: 0.5rem;
+    }
+
+    &:not(:last-child) {
+        padding-right: 0.5rem;
+    }
+
+    a {
+        display: block;
+        img {
+            border-radius: 0.5rem;
+        }
+    }
+}

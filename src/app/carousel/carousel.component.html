@@ -1,0 +1,11 @@
+<ng-container *ngIf="features">
+    <div rbCarousel class="wrapper">
+        <rb-feature *ngFor="let f of features" [feature]="f"></rb-feature>
+    </div>
+    <rb-button class="left" context="icon" inverse="true" (click)="prev()">
+        <i class="material-icons">keyboard_arrow_left</i>
+    </rb-button>
+    <rb-button class="right" context="icon" inverse="true" (click)="next()">
+        <i class="material-icons">keyboard_arrow_right</i>
+    </rb-button>
+</ng-container>

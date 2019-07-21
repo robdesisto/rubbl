@@ -1,1 +1,42 @@
-/* You can add global styles to this file, and also import other style files */
+/**
+Normally I'd use some subset of Bootstrap for this, but what's the fun in that? I usually pull in a custom set of
+Bootstrap, most of which isn't for runtime save their grid and utils because those are super handy. For the most part
+what I use are the mixins and variables.
+-r
+ */
+// Reset for browser sanity
+@import url('//cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css');
+// Like 90% sure Design Inspiration is using Material Icons albeit as SVGs
+@import url('//fonts.googleapis.com/icon?family=Material+Icons');
+@import "utils";
+
+/**
+One thing I started doing 1.5 years ago or so was exporting the base theme-y bits as a shared CSS file included in the apps via CDN using semantically
+versioned paths. This let us make small, safe changes to the palette globally so we could keep consistency without apps having to re-deploy. Obviously this
+only works if the changes are very minor.
+ */
+:root {
+    --rb-primary: #{$primary};
+    --rb-secondary: #{$secondary};
+    --rb-dark: #{$dark};
+    --rb-medium: #{$medium};
+    --rb-light: #{$light};
+    --rb-shadow: #{$shadow};
+    --rb-shadow-dark: #{$shadow-dark};
+    --rb-background: #{$background};
+}
+
+body {
+    color: var(--rb-dark);
+    font-family: $san-serif;
+    font-size: $base-font-size;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+*,
+:after,
+:before {
+    box-sizing: border-box;
+}

@@ -1,0 +1,24 @@
+// Breakpoints
+$breakpoint-small: 768px;
+
+// Palette
+$primary: #1d8ffb;
+$secondary: #f6f6f6;
+$light: #aaa;
+$medium: #444;
+$dark: #000;
+$background: #fff;
+
+// Generally there'd be more rhyme and reason around a few set levels of "depth" and then a mixin so you just set the depth of the thing
+$shadow: rgba($light, 0.2);
+$shadow-dark: rgba($dark, 0.3);
+
+// Typography
+$san-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$base-font-size: 1rem;
+$font-size-lg: 1.5rem;
+
+// Global stacking
+$zindex-absolute: 400;
+$zindex-sticky: 500;
+$zindex-dropdown: 600;

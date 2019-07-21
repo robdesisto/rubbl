@@ -1,0 +1,41 @@
+@import 'utils';
+
+:host {
+    display: block;
+    margin-top: 1rem;
+    overflow: hidden;
+    position: relative;
+
+    &:hover {
+        rb-button {
+            opacity: 1;
+        }
+    }
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+
+    &.sliding {
+        transition: transform 0.3s ease-in-out;
+    }
+}
+
+rb-button {
+    margin-top: -0.75rem;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: opacity 0.2s ease-in-out;
+    z-index: $zindex-absolute;
+
+    &.left {
+        left: 4rem;
+    }
+
+    &.right {
+        right: 4rem;
+    }
+}

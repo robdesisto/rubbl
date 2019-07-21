@@ -1,0 +1,87 @@
+@import 'utils';
+
+:host {
+    display: block;
+    flex-grow: 1;
+
+    @media (min-width: $breakpoint-small) {
+        padding: 0 2rem;
+    }
+}
+
+form {
+    margin: 0 auto;
+    max-width: 700px;
+    position: relative;
+}
+
+label {
+    display: none;
+}
+
+input {
+    background-color: var(--rb-secondary);
+    border: 0;
+    border-radius: 0.5rem;
+    display: inline-block;
+    font: $san-serif;
+    font-size: $base-font-size;
+    font-weight: 600;
+    padding: 0.75rem 4.25rem 0.75rem 0.75rem;
+    width: 100%;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.search-btns {
+    position: absolute;
+    right: 0.25rem;
+    top: 50%;
+    transform: translateY(-50%);
+
+    rb-button {
+        &:first-child {
+            margin-right: -0.25rem;
+        }
+
+        &:last-child {
+            position: relative;
+            z-index: 1;
+        }
+    }
+}
+
+.results {
+    background-color: var(--rb-background);
+    border-radius: 0 0 0.5rem 0.5rem;
+    box-shadow: 0 8px 7px -2px var(--rb-shadow-dark);
+    left: 0.25rem;
+    padding: 1rem;
+    position: absolute;
+    right: 0.25rem;
+    top: 100%;
+    z-index: $zindex-dropdown;
+
+    ul {
+        height: 0;
+        list-style-type: none;
+        margin: 0;
+        overflow: hidden;
+        padding: 0;
+        transition: height 0.2s ease-in-out;
+
+        li {
+            cursor: pointer;
+            font-weight: bold;
+            text-transform: lowercase;
+
+            &:not(:hover) {
+                span {
+                    color: var(--rb-light);
+                }
+            }
+        }
+    }
+}
