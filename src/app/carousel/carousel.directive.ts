@@ -7,7 +7,7 @@ import { FeatureComponent } from './feature/feature.component';
  * they are definitely helpful then, but otherwise, why pass over something native that works in all major browsers?
  *
  * In the past I dealt with this with a small library of animation directives (and still use one of them for routing transitions). These days, this is the type
- * of stuff I like to put in the web component layer. They're closer to the metal already and part of the DOM, so let them be the thing manipulatiing it.
+ * of stuff I like to put in the web component layer. They're closer to the metal already and part of the DOM, so let them be the thing manipulating it.
  * Angular then handles the higher level stuff. I have this theory about the next phase of UI Frameworks being "meta UI frameworks", I'll try to mention it.
  */
 @Directive({
